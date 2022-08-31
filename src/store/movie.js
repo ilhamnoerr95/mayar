@@ -194,15 +194,23 @@ const initialState = {
       ],
     },
   ],
+  searching: "",
 };
 
 export const movies = createSlice({
   name: "movies",
   initialState,
-  reducers: {},
+  reducers: {
+    searching: (state, action) => {
+      state.searching = action.payload;
+    },
+  },
 });
 
 export const selectMovie = (state) => state.dataMovie.movies;
 export const selectActors = (state) => state.dataMovie.actors;
+export const selectSearch = (state) => state.dataMovie.searching;
+
+export const { searching } = movies.actions;
 
 export default movies.reducer;
