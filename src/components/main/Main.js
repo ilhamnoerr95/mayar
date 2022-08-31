@@ -10,7 +10,7 @@ function Main() {
   const dataActors = useSelector(selectActors);
   const [search, setSearch] = useState("");
 
-  const filterMovie = dataMovie.filter((data) => {
+  const filterMovie = dataActors.filter((data) => {
     return data.name.toLowerCase().includes(search.toLowerCase());
   });
 
@@ -29,10 +29,8 @@ function Main() {
           onChange={(e) => setSearch(e.target.value)}
         />
       </InputGroup>
-      <div>
-        {filterMovie.map((movie) => {
-          return <MovieItem key={movie.id} data={movie} />;
-        })}
+      <div className="container">
+        <MovieItem filterMovie={filterMovie} />
       </div>
     </div>
   );
