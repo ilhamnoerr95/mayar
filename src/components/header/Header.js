@@ -17,15 +17,17 @@ function Header() {
 
   return (
     <Navbar>
-      <h5 style={{ width: "10rem" }}>LIST MOVIE</h5>
-      <InputGroup className="">
-        <InputGroup.Text>Find Movie</InputGroup.Text>
+      <p style={{ width: "10rem", textAlign: "right" }} className="h6">
+        LIST MOVIE
+      </p>
+      <InputGroup size="sm" className="px-4 py-2">
+        <InputGroup.Text>Search</InputGroup.Text>
         <Form.Control
           aria-label="First name"
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="FIND YOUR MOVIE OR ACTORS"
+          placeholder="Find your Moive or Actors"
         />
       </InputGroup>
     </Navbar>
