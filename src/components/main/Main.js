@@ -13,8 +13,15 @@ function Main() {
 
   // eslint-disable-next-line no-unused-vars
   const dispatch = useDispatch();
+
   const filterMovie = dataActors.filter((data) => {
-    return data.name.toLowerCase().includes(searching.toLowerCase());
+    return (
+      data.name.toLowerCase().includes(searching.toLowerCase()) ||
+      // source https://stackoverflow.com/questions/51589685/javascript-array-filter-by-element-in-children
+      data.movies.some((movie) =>
+        movie.name.toLowerCase().includes(searching.toLowerCase())
+      )
+    );
   });
 
   // dispatch(getData());
