@@ -27,7 +27,7 @@ function Header() {
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Find your Moive or Actors"
+          placeholder="Find your Movie or Actors"
         />
       </InputGroup>
     </Navbar>
