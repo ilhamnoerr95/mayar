@@ -27,9 +27,15 @@ function MovieItem(props) {
               <h5>Movie:</h5>
               <div>
                 {data.movies.map((movie) => (
-                  <span key={movie.id} style={{ marginRight: "0.5rem" }}>
+                  <div
+                    className="bx-movie"
+                    key={movie.id}
+                    style={{ marginRight: "0.5rem" }}
+                  >
                     {movie.name}
-                  </span>
+                    <br />
+                    <span>genre: {movie.genre}</span>
+                  </div>
                 ))}
               </div>
               {/* </Card.Text> */}

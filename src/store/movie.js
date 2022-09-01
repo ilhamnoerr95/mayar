@@ -21,6 +21,8 @@ query{actors {
 // FETCH DATA
 // eslint-disable-next-line no-unused-vars
 export const getData = () => async (dispatch) => {
+  // https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe
+  // fetch api tanpa menggunakan CORS
   fetch(konfigurasi.api.baseUrl, {
     method: "POST",
     headers: {

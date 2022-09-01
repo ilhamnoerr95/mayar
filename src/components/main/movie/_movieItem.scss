@@ -2,9 +2,20 @@
 
 .wrapper {
     background:#F8F8F8;
-   
+    // height: 100vh;
     .card{
         // height: 15vh;
-     
+     .bx-movie{
+        // display:flex;
+        // align-items:center;
+        // justify-content:center;
+        width: 100%;
+        background: #F8F8F8 ;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        >span{
+            font-weight:normal;
+        }
+     }
     }
 }

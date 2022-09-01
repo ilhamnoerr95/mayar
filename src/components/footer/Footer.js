@@ -1,7 +1,9 @@
+import "./_footer.scss";
+
 function Footer() {
   return (
     <>
-      <p>@ilhamnrachman</p>
+      <div className="footer">@ilhamnrachman</div>
     </>
   );
 }
