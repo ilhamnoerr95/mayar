@@ -6,13 +6,13 @@ import "./_app.scss";
 
 function App() {
   return (
-    <div style={{ backgroundColor: "#E3E2DD" }} className="wrapper-app">
+    <>
       <Header />
-      <div className="container">
-        <Home />
-      </div>
+
+      <Home />
+
       {/* <Footer /> */}
-    </div>
+    </>
   );
 }
 

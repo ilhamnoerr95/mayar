@@ -1,11 +1,7 @@
 import Main from "components/main";
 
 function Home() {
-  return (
-    <>
-      <Main />
-    </>
-  );
+  return <Main />;
 }
 
 export default Home;
