@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+
 import Card from "react-bootstrap/Card";
 import "./_movieItem.scss";
 
@@ -8,11 +9,15 @@ MovieItem.propTypes = {
 
 function MovieItem(props) {
   const { filterMovie } = props;
+
   return (
     <>
       <div className="wrapper row gy-3 justify-content-center py-5">
         {filterMovie.map((data) => (
-          <Card key={data.id} className="col-xs-12 col-sm-12 col-md-5 mx-1">
+          <Card
+            key={data.id}
+            className="col-xs-12 col-sm-12 col-md-5 mx-1 px-2"
+          >
             <Card.Body>
               <Card.Title>{data.name}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted ">
